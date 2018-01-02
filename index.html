@@ -25,183 +25,215 @@
         </div>
         
         <!-- Order Page -->
-        <div class="container-fluid mt-5">
-            <div class="row">
-                <div class="col-sm-auto mt-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Pizza Size:</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sizePersonal" value="size1">
-                                <label class="form-check-label"for="sizePersonal">
-                                    Personal
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sizeMedium" value="size2">
-                                <label class="form-check-label"for="sizeMedium">
-                                    Medium
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sizeLarge" value="size3" checked>
-                                <label class="form-check-label"for="sizeLarge">
-                                    Large
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sizeExtraLarge" value="size4">
-                                <label class="form-check-label"for="sizeExtraLarge">
-                                    Extra Large
-                                </label>
+        <form>
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-sm-auto">
+                       <div class="card border-white" style="width: 18rem; height: 0px;">
+                           <div class="card-body"></div>
+                       </div>
+                    </div>
+                    <div class="col-sm-auto order-md-3">
+                       <div class="card border-white" style="width: 18rem; height: 0px;">
+                           <div class="card-body"></div>
+                       </div>
+                   </div>
+                   <div class="col-sm-auto order-lg-3 order-md-1">
+                       <div class="card border-white text-right" style="width: 18rem;">
+                           <div class="card-body">
+                               Reset <i class="fa fa-refresh" aria-hidden="true"></i>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+               
+                <div class="row">
+                    
+                    <!-- Pizza Size -->
+                    <div class="col-sm-auto mt-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Pizza Size:</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sizePersonal" value="size1">
+                                    <label class="form-check-label"for="sizePersonal">
+                                        Personal
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sizeMedium" value="size2">
+                                    <label class="form-check-label"for="sizeMedium">
+                                        Medium
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sizeLarge" value="size3" checked>
+                                    <label class="form-check-label"for="sizeLarge">
+                                        Large
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sizeExtraLarge" value="size4">
+                                    <label class="form-check-label"for="sizeExtraLarge">
+                                        Extra Large
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-auto mt-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Choose a crust:</h5> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="crust1" value="crust1" checked>
-                                <label class="form-check-label"for="crust1">
-                                    Plain Crust
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="crust2" value="crust2">
-                                <label class="form-check-label"for="crust2">
-                                    Garlic Butter Crust
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="crust3" value="crust3">
-                                <label class="form-check-label"for="crust3">
-                                    Cheese Stuffed Crust
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="crust4" value="crust4">
-                                <label class="form-check-label"for="crust4">
-                                    Spicy Crust
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="crust5" value="crust5">
-                                <label class="form-check-label"for="crust5">
-                                    House Special Crust
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-auto mt-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Cheese:</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="cheese1" value="cheeseRegular" checked>
-                                <label class="form-check-label"for="cheese1">
-                                    Regular Cheese
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="cheese2" value="cheeseNone">
-                                <label class="form-check-label"for="cheese2">
-                                    No Cheese
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="cheese3" value="cheeseExtra">
-                                <label class="form-check-label"for="cheese3">
-                                    Extra Cheese
-                                </label>
+                    
+                    <!-- Crust Options -->
+                    <div class="col-sm-auto mt-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Choose a crust:</h5> 
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="crust1" value="crust1" checked>
+                                    <label class="form-check-label"for="crust1">
+                                        Plain Crust
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="crust2" value="crust2">
+                                    <label class="form-check-label"for="crust2">
+                                        Garlic Butter Crust
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="crust3" value="crust3">
+                                    <label class="form-check-label"for="crust3">
+                                        Cheese Stuffed Crust
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="crust4" value="crust4">
+                                    <label class="form-check-label"for="crust4">
+                                        Spicy Crust
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="crust5" value="crust5">
+                                    <label class="form-check-label"for="crust5">
+                                        House Special Crust
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-auto mt-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Choose a sauce:</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sauce1" value="sauce1" checked>
-                                <label class="form-check-label"for="sauce1">
-                                    Marinara
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sauce2" value="sauce2">
-                                <label class="form-check-label"for="sauce2">
-                                    White Sauce
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sauce3" value="sauce3">
-                                <label class="form-check-label"for="sauce3">
-                                    BBQ Sauce
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" id="sauce4" value="sauce4">
-                                <label class="form-check-label"for="sauce4">
-                                    No Sauce
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-auto mt-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Add Meats:</h5>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="meat1" id="meat1">
-                                <label class="form-check-label" for="meat1">
-                                    Pepperoni
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="meat2" id="meat2">
-                                <label class="form-check-label" for="meat2">
-                                    Sausage
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="meat3" id="meat3">
-                                <label class="form-check-label" for="meat3">
-                                    Canadian Bacon
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="meat4" id="meat4">
-                                <label class="form-check-label" for="meat4">
-                                    Ground Beef
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="meat5" id="meat5">
-                                <label class="form-check-label" for="meat5">
-                                    Anchovy
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="meat6" id="meat6">
-                                <label class="form-check-label" for="meat6">
-                                    Chicken
-                                </label>
+                    
+                    <!-- Cheese Options -->
+                    <div class="col-sm-auto mt-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Cheese:</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="cheese1" value="cheeseRegular" checked>
+                                    <label class="form-check-label"for="cheese1">
+                                        Regular Cheese
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="cheese2" value="cheeseNone">
+                                    <label class="form-check-label"for="cheese2">
+                                        No Cheese
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="cheese3" value="cheeseExtra">
+                                    <label class="form-check-label"for="cheese3">
+                                        Extra Cheese
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-sm-auto mt-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Add Veggies:</h5>
-                            <form>
+                <div class="row">
+        
+                    <!-- Sauce Options -->
+                    <div class="col-sm-auto mt-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Choose a sauce:</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sauce1" value="sauce1" checked>
+                                    <label class="form-check-label"for="sauce1">
+                                        Marinara
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sauce2" value="sauce2">
+                                    <label class="form-check-label"for="sauce2">
+                                        White Sauce
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sauce3" value="sauce3">
+                                    <label class="form-check-label"for="sauce3">
+                                        BBQ Sauce
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="sauce4" value="sauce4">
+                                    <label class="form-check-label"for="sauce4">
+                                        No Sauce
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Meat Toppings -->
+                    <div class="col-sm-auto mt-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Add Meats:</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="meat1" id="meat1">
+                                    <label class="form-check-label" for="meat1">
+                                        Pepperoni
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="meat2" id="meat2">
+                                    <label class="form-check-label" for="meat2">
+                                        Sausage
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="meat3" id="meat3">
+                                    <label class="form-check-label" for="meat3">
+                                        Canadian Bacon
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="meat4" id="meat4">
+                                    <label class="form-check-label" for="meat4">
+                                        Ground Beef
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="meat5" id="meat5">
+                                    <label class="form-check-label" for="meat5">
+                                        Anchovy
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="meat6" id="meat6">
+                                    <label class="form-check-label" for="meat6">
+                                        Chicken
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Veggie Toppings -->
+                    <div class="col-sm-auto mt-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Add Veggies:</h5>
                                 <div class="form-row">
                                     <div class="col">
                                         <div class="form-check">
@@ -256,12 +288,17 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            
+            <div class="row justify-content-center mt-3 mb-5">
+                <button type="button" class="btn btn-outline-success">Order Now!</button>
+            </div>
+        </form>
+        
         
         
         

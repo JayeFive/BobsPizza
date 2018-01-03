@@ -9,9 +9,10 @@ This site was made using HTML, CSS and Javascript
 
 #Todo List
 
-- Create basic grid layout
-- Form functionality
-- JavaScript functionality with order pricing
+* - Create basic grid layout
+* - Form functionality
+* - JavaScript functionality with order pricing
 - Order Receipt functionality
+- Add price modifications to main page for users
 - Stylize with pictures and color schemes
 - Finalize files and update README.md

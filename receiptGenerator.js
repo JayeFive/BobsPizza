@@ -133,15 +133,16 @@ function clearInvoice () {
 
 
 
-function updateSizePrice (priceMod) {
-    var priceElement = document.getElementById("sizePrice" + priceMod);
+function updateRadioButtonPrice (priceId, elemName) {
     var empty = 0;
-    priceElement.innerHTML = prices.pizzaSize[priceMod - 1].toFixed(2);
     
-    for (var i = 1; i <= document.getElementsByClassName("size-price").length; i++) {
-        if (i != priceMod) {
-            priceElement = document.getElementById("sizePrice" + i);
-            priceElement.innerHTML = empty.toFixed(2);
+    // Set the correct price from the prices object
+    document.getElementById(elemName + "Price" + priceId).innerHTML = prices.pizzaSize[priceId - 1].toFixed(2);
+    
+    // Set all other price boxes to 0.00
+    for (var i = 1; i <= document.getElementsByName(elemName).length - 1; i++) {
+        if (i != priceId) {
+            document.getElementById(elemName + "Price" + i).innerHTML = empty.toFixed(2);
         } 
     }
 }

@@ -10,6 +10,9 @@
               integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <!-- Font Awesome CDN Script-->
         <script src="https://use.fontawesome.com/6a03f7d19c.js"></script>
+        
+        <!-- Project Files -->
+        <link rel="stylesheet" href="./css/style.css">
         <script src="./receiptGenerator.js"></script>
         <title>Bob's Pizza</title>
     </header>
@@ -48,32 +51,46 @@
                     
                     <!-- Pizza Size -->
                     <div class="col-sm-auto mt-3">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card border-success" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Pizza Size:</h5>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="pizzaSize" id="sizePersonal" type="radio" value="size1">
-                                    <label class="form-check-label"for="sizePersonal">
-                                        Personal
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="pizzaSize" id="sizeMedium" type="radio" value="size2">
-                                    <label class="form-check-label"for="sizeMedium">
-                                        Medium
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="pizzaSize" id="sizeLarge" type="radio" value="size3" checked>
-                                    <label class="form-check-label"for="sizeLarge">
-                                        Large
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="pizzaSize" id="sizeExtraLarge" type="radio" value="size4">
-                                    <label class="form-check-label"for="sizeExtraLarge">
-                                        Extra Large
-                                    </label>
+                                <div class="btn-group-sm btn-group-toggle btn-group-vertical" data-toggle="buttons">
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updatePrice(1)">
+                                                <input type="radio" name="pizzaSize" id="size1" autocomplete="off"> Personal
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="sizePrice1">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection">
+                                                <input type="radio" name="pizzaSize" id="size2" autocomplete="off"> Medium
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="sizePrice2">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection active">
+                                                <input type="radio" name="pizzaSize" id="size3" autocomplete="off" checked> Large
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="sizePrice3">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection">
+                                                <input type="radio" name="pizzaSize" id="size4" autocomplete="off"> Extra Large
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="sizePrice4">0.00</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

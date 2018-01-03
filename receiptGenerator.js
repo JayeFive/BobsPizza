@@ -1,5 +1,11 @@
 //This script is for adding up the pizza choices for Bob's Pizza
 
+const prices = { pizzaSize: [6.00, 10, 14, 16] };
+
+
+
+
+
 function resetForm() {
     document.forms[0].reset();
 }
@@ -10,13 +16,15 @@ function findTotalPrice () {
     var totalPrice = 0
     var orderForm = document.forms[0];
     
+    
+    console.log(orderForm.pizzaSize.name);
     //Find pizza size
-    switch (orderForm.pizzaSize.value) {
-        case "size1": 
+    switch (orderForm.pizzaSize.id) {
+        case "personalSize": 
             totalPrice += 6;
-            generateOptionElem("Personal Pizza", "$6");
+            generateOptionElem(orderForm.pizzaSize.id, orderForm.pizzaSize.value);
             break;
-        case "size2":
+        case "mediumSize":
             totalPrice += 10;
             generateOptionElem("Medium Pizza", "$10");
             break;
@@ -120,4 +128,13 @@ function clearInvoice () {
     
     elements = document.getElementsByTagName("tr");
     while (elements[0]) elements[0].parentNode.removeChild(elements[0]);
+}
+
+
+
+
+function updatePrice (priceMod) {
+    var priceElement = document.getElementById("sizePrice" + priceMod);
+
+    priceElement.innerHTML = prices.pizzaSize[priceMod - 1].toPrecision(3);
 }

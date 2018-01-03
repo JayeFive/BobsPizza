@@ -1,6 +1,6 @@
 //This script is for adding up the pizza choices for Bob's Pizza
 
-const prices = { pizzaSize: [6.00, 10, 14, 16] };
+const prices = { pizzaSize: [6, 10, 14, 16] };
 
 
 
@@ -133,8 +133,16 @@ function clearInvoice () {
 
 
 
-function updatePrice (priceMod) {
+function updateSizePrice (priceMod) {
     var priceElement = document.getElementById("sizePrice" + priceMod);
-
-    priceElement.innerHTML = prices.pizzaSize[priceMod - 1].toPrecision(3);
+    var empty = 0;
+    priceElement.innerHTML = prices.pizzaSize[priceMod - 1].toFixed(2);
+    
+    for (var i = 1; i <= document.getElementsByClassName("size-price").length; i++) {
+        if (i != priceMod) {
+            priceElement = document.getElementById("sizePrice" + i);
+            priceElement.innerHTML = empty.toFixed(2);
+        } 
+    }
 }
+

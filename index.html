@@ -10,6 +10,7 @@
               integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <!-- Font Awesome CDN Script-->
         <script src="https://use.fontawesome.com/6a03f7d19c.js"></script>
+        <script src="./receiptGenerator.js"></script>
         <title>Bob's Pizza</title>
     </header>
     <body>
@@ -51,25 +52,25 @@
                             <div class="card-body">
                                 <h5 class="card-title">Pizza Size:</h5>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="sizePersonal" value="size1">
+                                    <input class="form-check-input" name="pizzaSize" id="sizePersonal" type="radio" value="size1">
                                     <label class="form-check-label"for="sizePersonal">
                                         Personal
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="sizeMedium" value="size2">
+                                    <input class="form-check-input" name="pizzaSize" id="sizeMedium" type="radio" value="size2">
                                     <label class="form-check-label"for="sizeMedium">
                                         Medium
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="sizeLarge" value="size3" checked>
+                                    <input class="form-check-input" name="pizzaSize" id="sizeLarge" type="radio" value="size3" checked>
                                     <label class="form-check-label"for="sizeLarge">
                                         Large
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="sizeExtraLarge" value="size4">
+                                    <input class="form-check-input" name="pizzaSize" id="sizeExtraLarge" type="radio" value="size4">
                                     <label class="form-check-label"for="sizeExtraLarge">
                                         Extra Large
                                     </label>
@@ -84,31 +85,31 @@
                             <div class="card-body">
                                 <h5 class="card-title">Choose a crust:</h5> 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="crust1" value="crust1" checked>
+                                    <input class="form-check-input" name="crust" type="radio" id="crust1" value="crust1" checked>
                                     <label class="form-check-label"for="crust1">
                                         Plain Crust
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="crust2" value="crust2">
+                                    <input class="form-check-input" name="crust" type="radio" id="crust2"value="crust2">
                                     <label class="form-check-label"for="crust2">
                                         Garlic Butter Crust
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="crust3" value="crust3">
+                                    <input class="form-check-input" name="crust" type="radio" id="crust3" value="crust3">
                                     <label class="form-check-label"for="crust3">
                                         Cheese Stuffed Crust
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="crust4" value="crust4">
+                                    <input class="form-check-input" name="crust" type="radio" id="crust4" value="crust4">
                                     <label class="form-check-label"for="crust4">
                                         Spicy Crust
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="crust5" value="crust5">
+                                    <input class="form-check-input" name="crust" type="radio" id="crust5" value="crust5">
                                     <label class="form-check-label"for="crust5">
                                         House Special Crust
                                     </label>
@@ -123,19 +124,19 @@
                             <div class="card-body">
                                 <h5 class="card-title">Cheese:</h5>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="cheese1" value="cheeseRegular" checked>
+                                    <input class="form-check-input" name="cheeseMod" type="radio" id="cheese1" value="cheeseRegular" checked>
                                     <label class="form-check-label"for="cheese1">
                                         Regular Cheese
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="cheese2" value="cheeseNone">
+                                    <input class="form-check-input" name="cheeseMod" type="radio" id="cheese2" value="cheeseNone">
                                     <label class="form-check-label"for="cheese2">
                                         No Cheese
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="cheese3" value="cheeseExtra">
+                                    <input class="form-check-input" name="cheeseMod" type="radio" id="cheese3" value="cheeseExtra">
                                     <label class="form-check-label"for="cheese3">
                                         Extra Cheese
                                     </label>
@@ -186,37 +187,37 @@
                             <div class="card-body">
                                 <h5 class="card-title">Add Meats:</h5>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="meat1" id="meat1">
+                                    <input class="form-check-input" name="meats" type="checkbox" value="meat1" id="meat1">
                                     <label class="form-check-label" for="meat1">
                                         Pepperoni
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="meat2" id="meat2">
+                                    <input class="form-check-input" name="meats" type="checkbox" value="meat2" id="meat2">
                                     <label class="form-check-label" for="meat2">
                                         Sausage
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="meat3" id="meat3">
+                                    <input class="form-check-input" name="meats" type="checkbox" value="meat3" id="meat3">
                                     <label class="form-check-label" for="meat3">
                                         Canadian Bacon
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="meat4" id="meat4">
+                                    <input class="form-check-input" name="meats" type="checkbox" value="meat4" id="meat4">
                                     <label class="form-check-label" for="meat4">
                                         Ground Beef
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="meat5" id="meat5">
+                                    <input class="form-check-input" name="meats" type="checkbox" value="meat5" id="meat5">
                                     <label class="form-check-label" for="meat5">
                                         Anchovy
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="meat6" id="meat6">
+                                    <input class="form-check-input" name="meats" type="checkbox" value="meat6" id="meat6">
                                     <label class="form-check-label" for="meat6">
                                         Chicken
                                     </label>
@@ -233,25 +234,25 @@
                                 <div class="form-row">
                                     <div class="col">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="veg1" id="veg1">
+                                            <input class="form-check-input" name="veggies" type="checkbox" value="veg1" id="veg1">
                                             <label class="form-check-label" for="veg1">
                                                 Tomatoes
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="veg2" id="veg2">
+                                            <input class="form-check-input" name="veggies" type="checkbox" value="veg2" id="veg2">
                                             <label class="form-check-label" for="veg2">
                                                 Onions
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="veg3" id="veg3">
+                                            <input class="form-check-input" name="veggies" type="checkbox" value="veg3" id="veg3">
                                             <label class="form-check-label" for="veg3">
                                                 Olives
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="veg4" id="veg4">
+                                            <input class="form-check-input" name="veggies" type="checkbox" value="veg4" id="veg4">
                                             <label class="form-check-label" for="veg4">
                                                 Green Peppers
                                             </label>
@@ -259,25 +260,25 @@
                                     </div>
                                     <div class="col">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="veg5" id="veg5">
+                                            <input class="form-check-input" name="veggies" type="checkbox" value="veg5" id="veg5">
                                             <label class="form-check-label" for="veg5">
                                                 Mushrooms
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="veg6" id="veg6">
+                                            <input class="form-check-input" name="veggies" type="checkbox" value="veg6" id="veg6">
                                             <label class="form-check-label" for="veg6">
                                                 Spinach
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="veg7" id="veg7">
+                                            <input class="form-check-input" name="veggies" type="checkbox" value="veg7" id="veg7">
                                             <label class="form-check-label" for="veg7">
                                                 Pineapple
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="veg8" id="veg8">
+                                            <input class="form-check-input" name="veggies" type="checkbox" value="veg8" id="veg8">
                                             <label class="form-check-label" for="veg8">
                                                 Jalapenos
                                             </label>
@@ -291,7 +292,9 @@
             </div>
             
             <div class="row justify-content-center mt-3 mb-5">
-                <button type="button" class="btn btn-outline-success">Order Now!</button>
+                <button type="button" class="btn btn-outline-success" value="submit"onClick="findTotalPrice()">
+                    Order Now!
+                </button>
             </div>
         </form>
         

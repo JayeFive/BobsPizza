@@ -1,7 +1,9 @@
 //This script is for adding up the pizza choices for Bob's Pizza
 
-
-
+function resetForm() {
+    document.forms[0].reset();
+}
+    
 
 function findTotalPrice () {
     

@@ -162,14 +162,13 @@ function updateCheckedButtonPrice (priceId, elemName) {
             changedElement.innerHTML = (1).toFixed(2);
         }   // If first free topping has not been selected, do nothing
     } else { // if the user just deselected a topping, firstly set that price box to 0.00
-        changedElement.innerHTML = (0).toFixed(2;)
+        changedElement.innerHTML = (0).toFixed(2);
         for (var i = 1; i <= priceBoxes.length; i++) {
              totalExtraPrice += Number(document.getElementById(elemName + "Price" + i).innerHTML);
         }   //Compare the number of selected toppings with the total extra price calculated in the for loop above
         if(totalExtraPrice === numChecked) {
             // Search through the prices to find the first one that's not 0.00, clear it and leave the function
             for (var i = 0; i < priceBoxes.length; i++) {
-                    console.log(priceBoxes[i].innerHTML);
                 if (Number(priceBoxes[i].innerHTML) == 1) {
                     priceBoxes[i].innerHTML = (0).toFixed(2);
                     return;

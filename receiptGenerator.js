@@ -10,7 +10,8 @@ var numVeggies = 0;
 
 
 function resetForm() {
-    document.forms[0].reset();
+    document.getElementById('orderForm').reset();
+    console.log("I have clicked");
 }
     
 

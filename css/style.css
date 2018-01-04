@@ -11,6 +11,10 @@ input {
     color: #28a745;
 }
 
+.navbar-linear-bg {
+    background: 
+        linear-gradient(90deg, rgb(90, 100, 90), rgb(220, 250, 220));
+}
 
 .selection {
     width: 12em !important;
@@ -18,4 +22,12 @@ input {
 
 .btn.disabled, .btn:disabled {
     opacity: 1;
+}
+
+.order-form-card {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-outline-success {
+    color: black;
 }

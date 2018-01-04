@@ -57,38 +57,38 @@
                                 <div class="btn-group-sm btn-group-toggle btn-group-vertical" data-toggle="buttons">
                                     <div class="input-group input-group-sm">
                                         <div class="input-group-append">
-                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(1, document.getElementById('pizzaSize1').name)">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(1, 'pizzaSize')">
                                                 <input type="radio" name="pizzaSize" id="pizzaSize1" autocomplete="off"> Personal
                                             </label>
                                             <span class="input-group-text border-success mb-2">$</span>
-                                            <span class="input-group-text border-success mb-2" name="sizePrice" id="pizzaSizePrice1">0.00</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaSizePrice1">0.00</span>
                                         </div>
                                     </div>
                                     <div class="input-group input-group-sm">
                                         <div class="input-group-append">
-                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(2, document.getElementById('pizzaSize2').name)">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(2, 'pizzaSize')">
                                                 <input type="radio" name="pizzaSize" id="pizzaSize2" autocomplete="off"> Medium
                                             </label>
                                             <span class="input-group-text border-success mb-2">$</span>
-                                            <span class="input-group-text border-success mb-2" name="sizePrice" id="pizzaSizePrice2">0.00</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaSizePrice2">0.00</span>
                                         </div>
                                     </div>
                                     <div class="input-group input-group-sm">
                                         <div class="input-group-append">
-                                            <label class="btn btn-success selection active" onClick="updateRadioButtonPrice(3, document.getElementById('pizzaSize3').name)">
+                                            <label class="btn btn-success selection active" onClick="updateRadioButtonPrice(3, 'pizzaSize')">
                                                 <input type="radio" name="pizzaSize" id="pizzaSize3" autocomplete="off" checked> Large
                                             </label>
                                             <span class="input-group-text border-success mb-2">$</span>
-                                            <span class="input-group-text border-success mb-2" name="sizePrice" id="pizzaSizePrice3">14.00</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaSizePrice3">14.00</span>
                                         </div>
                                     </div>
                                     <div class="input-group input-group-sm">
                                         <div class="input-group-append">
-                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(4, document.getElementById('pizzaSize4').name)">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(4, 'pizzaSize')">
                                                 <input type="radio" name="pizzaSize" id="pizzaSize4" autocomplete="off"> Extra Large
                                             </label>
                                             <span class="input-group-text border-success mb-2">$</span>
-                                            <span class="input-group-text border-success mb-2" name="sizePrice" id="pizzaSizePrice4">0.00</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaSizePrice4">0.00</span>
                                         </div>
                                     </div>
                                 </div>
@@ -98,127 +98,141 @@
                     
                     <!-- Crust Options -->
                     <div class="col-sm-auto mt-3">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card border-success" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Choose a crust:</h5> 
                                 <div class="btn-group-sm btn-group-toggle btn-group-vertical" data-toggle="buttons">
                                     <div class="input-group input-group-sm">
                                         <div class="input-group-append">
-                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(1)">
-                                                <input type="radio" name="pizzaSize" id="size1" autocomplete="off"> Personal
+                                            <label class="btn btn-success selection active" onClick="updateRadioButtonPrice(1, 'pizzaCrust')">
+                                                <input type="radio" name="pizzaCrust" id="pizzaCrust1" autocomplete="off" checked> Plain Crust
                                             </label>
                                             <span class="input-group-text border-success mb-2">$</span>
-                                            <span class="input-group-text border-success mb-2 size-price" id="pizzaCrustPrice1" name="pizzaCrust">0.00</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaCrustPrice1">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(2, 'pizzaCrust')">
+                                                <input type="radio" name="pizzaCrust" id="pizzaCrust2" autocomplete="off"> Garlic Butter Crust
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaCrustPrice2">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(3, 'pizzaCrust')">
+                                                <input type="radio" name="pizzaCrust" id="pizzaCrust3" autocomplete="off"> Cheese Stuffed Crust
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaCrustPrice3">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(4, 'pizzaCrust')">
+                                                <input type="radio" name="pizzaCrust" id="pizzaCrust4" autocomplete="off"> Spicy Crust
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaCrustPrice4">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(5, 'pizzaCrust')">
+                                                <input type="radio" name="pizzaCrust" id="pizzaCrust5" autocomplete="off"> House Special Crust
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaCrustPrice5">0.00</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--
-                    
-                    
-                    <div class="col-sm-auto mt-3">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Choose a crust:</h5> 
-                                <div class="form-check">
-                                    <input class="form-check-input" name="crust" type="radio" id="crust1" value="Plain Crust" checked>
-                                    <label class="form-check-label"for="crust1">
-                                        Plain Crust
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="crust" type="radio" id="crust2"value="Garlic Butter Crust">
-                                    <label class="form-check-label"for="crust2">
-                                        Garlic Butter Crust
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="crust" type="radio" id="crust3" value="Cheese Stuffed Crust">
-                                    <label class="form-check-label"for="crust3">
-                                        Cheese Stuffed Crust
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="crust" type="radio" id="crust4" value="Spicy Crust">
-                                    <label class="form-check-label"for="crust4">
-                                        Spicy Crust
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="crust" type="radio" id="crust5" value="House Special Crust">
-                                    <label class="form-check-label"for="crust5">
-                                        House Special Crust
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
-                    
-                    
-                    
-                    
                     
                     <!-- Cheese Options -->
                     <div class="col-sm-auto mt-3">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
+                        <div class="card border-success" style="width: 18rem;">
+                            <div class="card-body"> 
                                 <h5 class="card-title">Cheese:</h5>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="cheese" type="radio" id="cheese1" value="Regular Cheese" checked>
-                                    <label class="form-check-label"for="cheese1">
-                                        Regular Cheese
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="cheese" type="radio" id="cheese2" value="No Cheese">
-                                    <label class="form-check-label"for="cheese2">
-                                        No Cheese
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" name="cheese" type="radio" id="cheese3" value="Extra Cheese">
-                                    <label class="form-check-label"for="cheese3">
-                                        Extra Cheese
-                                    </label>
+                                <div class="btn-group-sm btn-group-toggle btn-group-vertical" data-toggle="buttons">
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection active" onClick="updateRadioButtonPrice(1, 'pizzaCheese')">
+                                                <input type="radio" name="pizzaCheese" id="pizzaCheese1" autocomplete="off" checked> Regualar Cheese
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaCheesePrice1">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(2, 'pizzaCheese')">
+                                                <input type="radio" name="pizzaCheese" id="pizzaCheese2" autocomplete="off"> No Cheese
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaCheesePrice2">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(3, 'pizzaCheese')">
+                                                <input type="radio" name="pizzaCheese" id="pizzaCheese3" autocomplete="off"> Extra Cheese
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaCheesePrice3">0.00</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="row">
-        
+                    
                     <!-- Sauce Options -->
+                    <div class="row">
                     <div class="col-sm-auto mt-3">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card border-success" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Choose a sauce:</h5>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="sauce1" value="Marinara" checked>
-                                    <label class="form-check-label"for="sauce1">
-                                        Marinara
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="sauce2" value="White Sauce">
-                                    <label class="form-check-label"for="sauce2">
-                                        White Sauce
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="sauce3" value="BBQ Sauce">
-                                    <label class="form-check-label"for="sauce3">
-                                        BBQ Sauce
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="sauce4" value="No Sauce">
-                                    <label class="form-check-label"for="sauce4">
-                                        No Sauce
-                                    </label>
+                                <div class="btn-group-sm btn-group-toggle btn-group-vertical" data-toggle="buttons">
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection active" onClick="updateRadioButtonPrice(1, 'pizzaSauce')">
+                                                <input type="radio" name="pizzaSauce" id="pizzaSauce1" autocomplete="off" checked> Marinara
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaSaucePrice1">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(2, 'pizzaSauce')">
+                                                <input type="radio" name="pizzaSauce" id="pizzaSauce2" autocomplete="off"> White Sauce
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaSaucePrice2">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(3, 'pizzaSauce')">
+                                                <input type="radio" name="pizzaSauce" id="pizzaSauce3" autocomplete="off"> BBQ Sauce
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaSaucePrice3">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onClick="updateRadioButtonPrice(3, 'pizzaSauce')">
+                                                <input type="radio" name="pizzaSauce" id="pizzaSauce3" autocomplete="off"> No Sauce
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2" id="pizzaSaucePrice3">0.00</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -226,9 +240,71 @@
                     
                     <!-- Meat Toppings -->
                     <div class="col-sm-auto mt-3">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card border-success" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Add Meats:</h5>
+                                <div class="btn-group-sm btn-group-toggle btn-group-vertical" data-toggle="buttons">
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onChange="updateCheckedButtonPrice(1, 'pizzaMeats')">
+                                                <input type="checkbox" name="pizzaMeats" id="pizzaMeats1" autocomplete="off"> Pepperoni
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2 pizzaMeats" id="pizzaMeatsPrice1">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onChange="updateCheckedButtonPrice(2, 'pizzaMeats')">
+                                                <input type="checkbox" name="pizzaMeats" id="pizzaMeats2" autocomplete="off"> Sausage
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2 pizzaMeats" id="pizzaMeatsPrice2">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onChange="updateCheckedButtonPrice(3, 'pizzaMeats')">
+                                                <input type="checkbox" name="pizzaMeats" id="pizzaMeats3" autocomplete="off"> Canadian Bacon
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2 pizzaMeats" id="pizzaMeatsPrice3">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onChange="updateCheckedButtonPrice(4, 'pizzaMeats')">
+                                                <input type="checkbox" name="pizzaMeats" id="pizzaMeats4" autocomplete="off"> Ground Beef
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2 pizzaMeats" id="pizzaMeatsPrice4">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onChange="updateCheckedButtonPrice(5, 'pizzaMeats')">
+                                                <input type="checkbox" name="pizzaMeats" id="pizzaMeats5" autocomplete="off"> Anchovy
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2 pizzaMeats" id="pizzaMeatsPrice5">0.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-append">
+                                            <label class="btn btn-success selection" onChange="updateCheckedButtonPrice(6, 'pizzaMeats')">
+                                                <input type="checkbox" name="pizzaMeats" id="pizzaMeats6" autocomplete="off"> Chicken
+                                            </label>
+                                            <span class="input-group-text border-success mb-2">$</span>
+                                            <span class="input-group-text border-success mb-2 pizzaMeats" id="pizzaMeatsPrice6">0.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                                <!--
                                 <div class="form-check">
                                     <input class="form-check-input" name="meats" type="checkbox" value="Pepperoni" id="meat1">
                                     <label class="form-check-label" for="meat1">
@@ -268,6 +344,8 @@
                             </div>
                         </div>
                     </div>
+                    -->
+
                     
                     <!-- Veggie Toppings -->
                     <div class="col-sm-auto mt-3">

@@ -1,7 +1,14 @@
 
+body {
+    background-image: url("../img/bg-neon.jpg");
+}
 
 input {
     visibility: hidden;
+}
+
+#refresh-button {
+    color: #28a745;
 }
 
 

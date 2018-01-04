@@ -18,8 +18,21 @@
     </header>
     <body>
         <!-- Naviagtion -->
-        <nav class="navbar navbar-light bg-light justify-content-center">
-            <a class="navbar-brand" href="#"><i class="fa fa-cutlery pr-2" aria-hidden="true"></i>Bob's Pizza</a>
+        <nav class="navbar navbar-light fixed-top bg-light">
+            
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand mx-auto" href="#"><i class="fa fa-cutlery pr-2" aria-hidden="true"></i>Bob's Pizza</a>
+                
+                <div class="d-flex justify-content-end">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-append">
+                            <label class="btn btn-success bg-success disabled">Total:</label>
+                            <span class="input-group-text border-success mb-2">$</span>
+                            <span class="input-group-text border-success mb-2" id="pizzaSizePrice1">0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
         
         

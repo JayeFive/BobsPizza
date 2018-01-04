@@ -8,3 +8,7 @@ input {
 .selection {
     width: 12em !important;
 }
+
+.btn.disabled, .btn:disabled {
+    opacity: 1;
+}

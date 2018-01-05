@@ -22,6 +22,8 @@ function resetForm() {
 }
     
 
+// This function runs the receipt modal
+// Needs desperately to be refactored
 function findTotalPrice () {
     
   var totalPrice = 0

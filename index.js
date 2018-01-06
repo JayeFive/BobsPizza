@@ -10,10 +10,21 @@ const prices = {
 };
 
 
-
-
 // Event handler for the refresh button in the navbar
 document.getElementById('refresh-button').addEventListener("click", resetForm, false);
+
+
+// Event handler for radio button changes
+var radioButtonLabels = document.getElementsByClassName("radio-btn-label");
+
+// Add event listener for each radio button
+for (var i = 0; i < radioButtonLabels.length; i++) {
+  
+  radioButtonLabels[i].addEventListener('click', function () {
+    updateRadioButtonPrice (this.firstElementChild.id.slice(-1), this.firstElementChild.name);
+  }, false);
+  
+}
 
 
 // Manually set all radio buttons to their default value and clear all checkboxes and price boxes

@@ -12,13 +12,17 @@ const prices = {
 var radioButtonLabels = document.getElementsByClassName("radio-btn-label");
 var checkboxLabels = document.getElementsByClassName("checkbox-btn-label");
 
-
+// Add event listeners to all input parent labels
 function addListeners(nodeList) {
   
   for (var i = 0; i < nodeList.length; i++) {
   
     nodeList[i].addEventListener('click', function() {
-      updateRadioButtonPrice (this.firstElementChild.id.slice(-1), this.firstElementChild.name);
+      if (nodeList === radioButtonLabels) {
+        updateRadioButtonPrice(this.firstElementChild.id.slice(-1), this.firstElementChild.name);
+      } else if (nodeList === checkboxLabels) {
+        updateCheckedButtonPrice(this.firstElementChild.slice(-1), this.firstElementChild.name);
+      }
     }, false);
   
   }

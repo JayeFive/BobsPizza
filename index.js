@@ -13,26 +13,22 @@ var radioButtonLabels = document.getElementsByClassName("radio-btn-label");
 var checkboxLabels = document.getElementsByClassName("checkbox-btn-label");
 
 // Add event listeners to all input parent labels
-function addListeners(nodeList) {
+for (var i = 0; i < radioButtonLabels.length; i++) {
   
-  for (var i = 0; i < nodeList.length; i++) {
-  
-    nodeList[i].addEventListener('click', function() {
-      if (nodeList === radioButtonLabels) {
-        updateRadioButtonPrice(this.firstElementChild.id.slice(-1), this.firstElementChild.name);
-      } else if (nodeList === checkboxLabels) {
-        updateCheckedButtonPrice(this.firstElementChild.slice(-1), this.firstElementChild.name);
-      }
-    }, false);
-  
-  }
-  
+  radioButtonLabels[i].addEventListener('click', function() {
+    updateRadioButtonPrice(this.firstElementChild.id.slice(-1), this.firstElementChild.name);
+  }, false);
+    
 }
 
-addListeners(radioButtonLabels);
-addListeners(checkboxLabels);
 
-
+for (var i = 0; i < checkboxLabels.length; i++) {
+  
+  checkboxLabels[i].addEventListener('change', function() {
+    updateCheckedButtonPrice(this.firstElementChild.id.slice(-1), this.firstElementChild.name);
+  }, false);
+  
+}
 
 // Event handler for the refresh button in the navbar
 document.getElementById('refresh-button').addEventListener("click", resetForm, false);
@@ -52,7 +48,7 @@ function clearInvoice () {
 }
 
 // Live update of price boxes next to radio buttons
-function updateRadioButtonPrice (priceId, elemName) {
+function updateRadioButtonPrice(priceId, elemName) {
   // Set the correct price from the prices object
   document.getElementById(elemName + "Price" + priceId).innerHTML = prices[elemName][priceId - 1].toFixed(2);
   // Set all other price boxes to 0.00
@@ -66,13 +62,13 @@ function updateRadioButtonPrice (priceId, elemName) {
 }
 
 // Live update of price boxes next to checkboxes
-function updateCheckedButtonPrice (priceId, elemName) {
-  
+function updateCheckedButtonPrice(priceId, elemName) {
+  console.log("Function ran at least")
   var totalExtraPrice = 0;
-  // Find the number of checked checkboxes
-  var numChecked = getCheckedBoxes(elemName);
+  var numChecked = getCheckedBoxes(elemName);  // Find the number of checked checkboxes
   var priceBoxes = document.getElementsByClassName(elemName);
   var changedElement = document.getElementById(elemName + "Price" + priceId);
+  console.log(changedElement);
   //Check if the user just selected or deselected a topping
   if (document.getElementById(elemName + priceId).checked) {
     // Check if the first free topping has already been selected 
@@ -101,7 +97,7 @@ function updateCheckedButtonPrice (priceId, elemName) {
   }
 }
 
-// function to check the number of checked boxes
+// function to determine the number of checked boxes
 function getCheckedBoxes (inputName) {
   var checkboxes = document.getElementsByName(inputName);   
   var numChecked = 0;

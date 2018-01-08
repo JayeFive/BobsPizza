@@ -6,6 +6,8 @@ Created by: Johnny Olson            Last Modified: 1/2/2018
 This site was made using HTML, CSS and Javascript
 
 
+This is a [link](./css/style.css)
+
 
 #Todo List
 

@@ -8,6 +8,8 @@ This site was made using HTML, CSS and Javascript
 
 This is a [link](./css/style.css)
 
+* [link 2](www.google.com)
+
 
 #Todo List
 

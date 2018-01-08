@@ -8,7 +8,7 @@ This site was made using HTML, CSS and Javascript
 
 This is a [link](./css/style.css)
 
-* [link 2](www.google.com)
+* [link 2](./Project Academy/css)
 
 
 #Todo List

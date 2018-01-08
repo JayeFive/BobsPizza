@@ -24,7 +24,7 @@ for (var i = 0; i < radioButtonLabels.length; i++) {
 
 for (var i = 0; i < checkboxLabels.length; i++) {
   
-  checkboxLabels[i].addEventListener('change', function() {
+  checkboxLabels[i].addEventListener('click', function() {
     updateCheckedButtonPrice(this.firstElementChild.id.slice(-1), this.firstElementChild.name);
   }, false);
   

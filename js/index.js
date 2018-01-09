@@ -11,7 +11,8 @@ const prices = {
 
 const optionStrings = {
   pizzaSize: ["Personal Pizza", "Medium Pizza", "Large Pizza", "Extra Large Pizza"],
-  pizzaCrust: []
+  pizzaCrust: ["Plain Crust", "Garlic Butter Crust", "Cheese Stuffed Crust", "Spicy Crust", "House Special Crust"],
+  pizzaCheese: []
 }
 
 // Event handler for the refresh button in the navbar
@@ -136,20 +137,27 @@ function findTotalPrice () {
   
   // Find pizza size
   var sizeId = $('input[name=pizzaSize]:checked').attr('id').slice(-1);
+  var crustId = $('input[name=pizzaCrust]:checked').attr('id').slice(-1);
   
   generateOptionElem(optionStrings.pizzaSize[sizeId - 1],"$" + prices.pizzaSize[sizeId - 1]);
-  totalPrice += prices.pizzaSize[sizeId - 1];             // add to total price
+  totalPrice += prices.pizzaSize[sizeId - 1];
+  
+  
+  //Determine crust type line item
+  generateOptionElem(optionStrings.pizzaCrust[crustId - 1], "$" + prices.pizzaCrust[crustId - 1]);
+  totalPrice += prices.pizzaCrust[crustId - 1];
   
     
-  //Determine crust type line item
-  var crusts = document.getElementsByName("pizzaCrust");
-  for (var i = 0; i < crusts.length; i++) {
-    if (crusts[i].checked == true && crusts[i].id == "pizzaCrust3") { //crust3(stuffed crust) costs extra
-      generateOptionElem(crusts[i].value, "$3");
-      totalPrice += 3;
-    } else if (crusts[i].checked == true && crusts[i].id != "pizzaCrust3")
-      generateOptionElem(crusts[i].value, "$0");
-    }
+    
+    
+  // var crusts = document.getElementsByName("pizzaCrust");
+  // for (var i = 0; i < crusts.length; i++) {
+  //   if (crusts[i].checked == true && crusts[i].id == "pizzaCrust3") { //crust3(stuffed crust) costs extra
+  //     generateOptionElem(crusts[i].value, "$3");
+  //     totalPrice += 3;
+  //   } else if (crusts[i].checked == true && crusts[i].id != "pizzaCrust3")
+  //     generateOptionElem(crusts[i].value, "$0");
+  //   }
     
     
   //Determine extra cheese line item
@@ -206,7 +214,7 @@ function findTotalPrice () {
     totalPrice += (numVeggies - 1);
   }
     
-  console.log(totalPrice);
+  console.log("total price: " + totalPrice);
     
   generateOptionElem("", "");
   generateOptionElem("<strong>Total</strong>", "$" + totalPrice)

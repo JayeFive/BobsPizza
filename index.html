@@ -11,6 +11,10 @@
     <!-- Font Awesome CDN Script-->
     <script src="https://use.fontawesome.com/6a03f7d19c.js"></script>
     
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    
     <!-- Project Files -->
     <link rel="stylesheet" href="./css/style.css">
     
@@ -257,8 +261,8 @@
                 <div class="btn-group-sm btn-group-toggle btn-group-vertical" data-toggle="buttons">
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
-                        <input type="checkbox" name="pizzaMeats" id="pizzaMeats1" autocomplete="off"> Pepperoni
+                      <label class="btn btn-outline-success selection"> 
+                        <input class="invisible" type="checkbox" name="pizzaMeats" id="pizzaMeats1" autocomplete="off"> Pepperoni
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
                       <span class="input-group-text border-success mb-2 pizzaMeats" id="pizzaMeatsPrice1">0.00</span>
@@ -266,7 +270,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaMeats" id="pizzaMeats2" autocomplete="off"> Sausage
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -275,7 +279,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaMeats" id="pizzaMeats3" autocomplete="off"> Canadian Bacon
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -284,7 +288,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaMeats" id="pizzaMeats4" autocomplete="off"> Ground Beef
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -293,7 +297,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaMeats" id="pizzaMeats5" autocomplete="off"> Anchovy
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -302,7 +306,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaMeats" id="pizzaMeats6" autocomplete="off"> Chicken
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -322,7 +326,7 @@
                 <div class="btn-group-sm btn-group-toggle btn-group-vertical" data-toggle="buttons">
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaVeggies" id="pizzaVeggies1" autocomplete="off"> Tomatoes
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -331,7 +335,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaVeggies" id="pizzaVeggies2" autocomplete="off"> Onions
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -340,7 +344,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaVeggies" id="pizzaVeggies3" autocomplete="off"> Olives
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -349,7 +353,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaVeggies" id="pizzaVeggies4" autocomplete="off"> Green Peppers
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -358,7 +362,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaVeggies" id="pizzaVeggies5" autocomplete="off"> Mushrooms
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -367,7 +371,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaVeggies" id="pizzaVeggies6" autocomplete="off"> Spinach
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -376,7 +380,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaVeggies" id="pizzaVeggies7" autocomplete="off"> Pineapple
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -385,7 +389,7 @@
                   </div>
                   <div class="input-group input-group-sm">
                     <div class="input-group-append">
-                      <label class="btn btn-outline-success selection checkbox-btn-label">
+                      <label class="btn btn-outline-success selection">
                         <input type="checkbox" name="pizzaVeggies" id="pizzaVeggies8" autocomplete="off"> Jalapenos
                       </label>
                       <span class="input-group-text border-success mb-2">$</span>
@@ -442,15 +446,14 @@
         
         
     <!-- Local javaScript scripts -->
-    <script src="./index.js"></script>
-    <script src="./receiptGenerator.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/receiptGenerator.js"></script>
     <!-- Bootstrap javaScript CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" 
-            integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.js></script>
   </body>
     
 </html>

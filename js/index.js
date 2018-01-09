@@ -16,6 +16,10 @@ const optionStrings = {
   pizzaSauce: ["Marinara", "White Sauce", "BBQ Sauce", "No Sauce"]
 };
 
+const toppingsMeat = ["Pepperoni", "Sausage", "Canadian Bacon", "Ground Beef", "Anchovy", "Chicken"];
+const toppingsVeggie = ["Tomatoes", "Onions", "Olives", "Green Peppers", "Mushrooms", "Spinach", "Pineapple"];
+
+
 // Event handler for the refresh button in the navbar
 document.getElementById('refresh-button').addEventListener("click", resetForm, false);
 
@@ -141,51 +145,44 @@ function findTotalPrice () {
   var crustId = $('input[name=pizzaCrust]:checked').attr('id').slice(-1);
   var cheeseId = $('input[name=pizzaCheese]:checked').attr('id').slice(-1);
   var sauceId = $('input[name=pizzaSauce]:checked').attr('id').slice(-1);
+  var meatIds = $('input[name=pizzaMeats]:checked');
+  var veggieIds = $('input[name=pizzaVeggies]:checked');
   
+  // Determine pizza size line item
   generateOptionElem(optionStrings.pizzaSize[sizeId - 1],"$" + prices.pizzaSize[sizeId - 1]);
   totalPrice += prices.pizzaSize[sizeId - 1];
-  
-  
-  //Determine crust type line item
+  // Determine crust type line item
   generateOptionElem(optionStrings.pizzaCrust[crustId - 1], "$" + prices.pizzaCrust[crustId - 1]);
   totalPrice += prices.pizzaCrust[crustId - 1];
-  
-    
-  //Determine extra cheese line item
+  // Determine extra cheese line item
   generateOptionElem(optionStrings.pizzaCheese[cheeseId - 1], "$" + prices.pizzaCheese[cheeseId - 1]);
   totalPrice += prices.pizzaCheese[cheeseId - 1];
-    
-  //Determine sauce line item
+  // Determine sauce line item
   generateOptionElem(optionStrings.pizzaSauce[sauceId - 1], "$" + prices.pizzaSauce[sauceId - 1]);
   totalPrice += prices.pizzaSauce[sauceId -1];
-
-        
-  //Determine extra toppings -- first meat and first veggie are free
-  var meats = document.getElementsByName("meats");
-  var veggies = document.getElementsByName("veggies");
-  
-  for (var i = 0; i < meats.length; i++) {
-    if (meats[i].checked == true) {
+  // Determine meat toppings
+  for (var i = 0; i < meatIds.length; i++) {
+    if (meatIds[i].checked == true) {
       numMeats++;
-      if (numMeats <= 1) {
-        generateOptionElem(meats[i].value, "$0");
+      if (numMeats <= 1) {            // First meat free
+        generateOptionElem(toppingsMeat[(meatIds[i].id.slice(-1)) - 1], "$0");
       } else {
-        generateOptionElem(meats[i].value, "$1");
+        generateOptionElem(toppingsMeat[(meatIds[i].id.slice(-1)) - 1], "$1");
       }
     }
   }
-    
-  for (var i = 0; i < veggies.length; i++) {
-    if (veggies[i].checked == true) {
+  
+  for (var i = 0; i < veggieIds.length; i++) {
+    if (veggieIds[i].checked == true) {
       numVeggies++;
-      if (numVeggies <= 1) {
-        generateOptionElem(veggies[i].value, "$0");
+      if (numVeggies <= 1) {          // First veggie free
+        generateOptionElem(toppingsVeggie[(veggieIds[i].id.slice(-1)) - 1], "$0");
       } else {
-        generateOptionElem(veggies[i].value, "$1");
+        generateOptionElem(toppingsVeggie[(veggieIds[i].id.slice(-1)) - 1], "$1");
       }
     }
   }
-    
+  // Add topping prices to total price
   if (numMeats - 1 >= 1) {
         totalPrice += (numMeats - 1);
   }
@@ -193,14 +190,12 @@ function findTotalPrice () {
     totalPrice += (numVeggies - 1);
   }
     
-  console.log("total price: " + totalPrice);
-    
   generateOptionElem("", "");
   generateOptionElem("<strong>Total</strong>", "$" + totalPrice)
 }
 
 
-
+// Add line item to modal
 function generateOptionElem (option, price) {
   var invoice = document.getElementById("invoice");
   var newRow = document.createElement("tr");

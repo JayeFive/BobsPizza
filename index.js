@@ -23,11 +23,8 @@ function createListeners (inputArr) {
   
   for (var i = 0; i < inputArr.length; i++) {
     
-    console.log(inputArr[i]);
-    
     inputArr[i].addEventListener('click', function() {
       if (inputArr == radioBtnLabels) {
-        console.log("radios")
         updateRadioButtonPrice(this.firstElementChild.id.slice(-1), this.firstElementChild.name);
       } else if (inputArr == checkboxLabels) {
         updateCheckedButtonPrice(this.firstElementChild.id.slice(-1), this.firstElementChild.name);

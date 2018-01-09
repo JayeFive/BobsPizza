@@ -12,7 +12,8 @@ const prices = {
 const optionStrings = {
   pizzaSize: ["Personal Pizza", "Medium Pizza", "Large Pizza", "Extra Large Pizza"],
   pizzaCrust: ["Plain Crust", "Garlic Butter Crust", "Cheese Stuffed Crust", "Spicy Crust", "House Special Crust"],
-  pizzaCheese: []
+  pizzaCheese: ["Regular Cheese", "No Cheese", "Extra Cheese"],
+  pizzaSauce: []
 }
 
 // Event handler for the refresh button in the navbar
@@ -138,6 +139,7 @@ function findTotalPrice () {
   // Find pizza size
   var sizeId = $('input[name=pizzaSize]:checked').attr('id').slice(-1);
   var crustId = $('input[name=pizzaCrust]:checked').attr('id').slice(-1);
+  var cheeseId = $('input[name=pizzaCheese]:checked').attr('id').slice(-1);
   
   generateOptionElem(optionStrings.pizzaSize[sizeId - 1],"$" + prices.pizzaSize[sizeId - 1]);
   totalPrice += prices.pizzaSize[sizeId - 1];
@@ -148,27 +150,10 @@ function findTotalPrice () {
   totalPrice += prices.pizzaCrust[crustId - 1];
   
     
-    
-    
-  // var crusts = document.getElementsByName("pizzaCrust");
-  // for (var i = 0; i < crusts.length; i++) {
-  //   if (crusts[i].checked == true && crusts[i].id == "pizzaCrust3") { //crust3(stuffed crust) costs extra
-  //     generateOptionElem(crusts[i].value, "$3");
-  //     totalPrice += 3;
-  //   } else if (crusts[i].checked == true && crusts[i].id != "pizzaCrust3")
-  //     generateOptionElem(crusts[i].value, "$0");
-  //   }
-    
-    
   //Determine extra cheese line item
-  var cheeses = document.getElementsByName("cheese");
-  for (var i = 0; i < cheeses.length; i++) {
-    if (cheeses[i].checked == true && cheeses[i].id == "cheese3") { //cheese3(extra cheese) costs extra
-      generateOptionElem(cheeses[i].value, "$3");
-      totalPrice += 3;
-    } else if (cheeses[i].checked == true && cheeses[i].id != "cheese3")
-      generateOptionElem(cheeses[i].value, "$0");
-  }
+  generateOptionElem(optionStrings.pizzaCheese[cheeseId - 1], "$" + prices.pizzaCheese[cheeseId - 1]);
+  totalPrice += prices.pizzaCheese[cheeseId - 1];
+    
     
 
   //Determine sauce line item

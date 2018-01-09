@@ -13,8 +13,8 @@ const optionStrings = {
   pizzaSize: ["Personal Pizza", "Medium Pizza", "Large Pizza", "Extra Large Pizza"],
   pizzaCrust: ["Plain Crust", "Garlic Butter Crust", "Cheese Stuffed Crust", "Spicy Crust", "House Special Crust"],
   pizzaCheese: ["Regular Cheese", "No Cheese", "Extra Cheese"],
-  pizzaSauce: []
-}
+  pizzaSauce: ["Marinara", "White Sauce", "BBQ Sauce", "No Sauce"]
+};
 
 // Event handler for the refresh button in the navbar
 document.getElementById('refresh-button').addEventListener("click", resetForm, false);
@@ -140,6 +140,7 @@ function findTotalPrice () {
   var sizeId = $('input[name=pizzaSize]:checked').attr('id').slice(-1);
   var crustId = $('input[name=pizzaCrust]:checked').attr('id').slice(-1);
   var cheeseId = $('input[name=pizzaCheese]:checked').attr('id').slice(-1);
+  var sauceId = $('input[name=pizzaSauce]:checked').attr('id').slice(-1);
   
   generateOptionElem(optionStrings.pizzaSize[sizeId - 1],"$" + prices.pizzaSize[sizeId - 1]);
   totalPrice += prices.pizzaSize[sizeId - 1];
@@ -154,17 +155,10 @@ function findTotalPrice () {
   generateOptionElem(optionStrings.pizzaCheese[cheeseId - 1], "$" + prices.pizzaCheese[cheeseId - 1]);
   totalPrice += prices.pizzaCheese[cheeseId - 1];
     
-    
-
   //Determine sauce line item
-  var sauces = document.getElementsByName("sauce");
-  for (var i = 0; i < sauces.length; i++) {
-    if (sauces[i].checked == true) {
-      generateOptionElem(sauces[i].value, "$0");
-    }
-  }
-        
-        
+  generateOptionElem(optionStrings.pizzaSauce[sauceId - 1], "$" + prices.pizzaSauce[sauceId - 1]);
+  totalPrice += prices.pizzaSauce[sauceId -1];
+
         
   //Determine extra toppings -- first meat and first veggie are free
   var meats = document.getElementsByName("meats");

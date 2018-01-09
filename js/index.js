@@ -9,6 +9,11 @@ const prices = {
   pizzaSauce: [0, 0, 0, 0]
 };
 
+const optionStrings = {
+  pizzaSize: ["Personal Pizza", "Medium Pizza", "Large Pizza", "Extra Large Pizza"],
+  pizzaCrust: []
+}
+
 // Event handler for the refresh button in the navbar
 document.getElementById('refresh-button').addEventListener("click", resetForm, false);
 
@@ -119,7 +124,7 @@ function getCheckedBoxes (inputName) {
 
 
 
-
+/* These are the scripts for generating the receipt modal */
 var numMeats = 0;
 var numVeggies = 0;
 
@@ -128,30 +133,13 @@ var numVeggies = 0;
 function findTotalPrice () {
     
   var totalPrice = 0
-  var orderForm = document.getElementById("orderForm");
-  console.log(orderForm);
-
   
   // Find pizza size
-  switch (orderForm.pizzaSize.id) {
-    case "personalSize": 
-      totalPrice += 6;
-      generateOptionElem(orderForm.pizzaSize.id, orderForm.pizzaSize.value);
-      break;
-    case "mediumSize":
-      totalPrice += 10;
-      generateOptionElem("Medium Pizza", "$10");
-      break;
-    case "size3":
-      totalPrice += 14;
-      generateOptionElem("Large Pizza", "$14");
-      break;
-    case "size4":
-      totalPrice += 16;
-      generateOptionElem("Extra Large Pizza", "$16");
-      break;
-  }   
-    
+  var sizeId = $('input[name=pizzaSize]:checked').attr('id').slice(-1);
+  
+  generateOptionElem(optionStrings.pizzaSize[sizeId - 1],"$" + prices.pizzaSize[sizeId - 1]);
+  totalPrice += prices.pizzaSize[sizeId - 1];             // add to total price
+  
     
   //Determine crust type line item
   var crusts = document.getElementsByName("pizzaCrust");

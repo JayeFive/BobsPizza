@@ -9,27 +9,6 @@ const prices = {
   pizzaSauce: [0, 0, 0, 0]
 };
 
-var radioBtnLabels = document.getElementsByClassName("radio-btn-label");
-var checkboxLabels = document.getElementsByClassName("checkbox-btn-label");
-
-// Add event listeners to all input parent labels
-function createListeners (inputArr) {
-  
-  for (var i = 0; i < inputArr.length; i++) {
-    
-    inputArr[i].addEventListener('click', function() {
-      if (inputArr == radioBtnLabels) {
-        updateRadioButtonPrice(this.firstElementChild.id.slice(-1), this.firstElementChild.name);
-      }
-    }, false);
-    
-  }
-}
-
-// Call the event listener creation function above
-createListeners(radioBtnLabels);
- 
-
 // Event handler for the refresh button in the navbar
 document.getElementById('refresh-button').addEventListener("click", resetForm, false);
 
@@ -46,6 +25,16 @@ function clearInvoice () {
   elements = document.getElementsByTagName("tr");
   while (elements[0]) elements[0].parentNode.removeChild(elements[0]);
 }
+
+$('label > input[type=radio]').on('change', function () {
+  
+  priceId = $(this).attr('id').slice(-1);
+  elemName = $(this).attr('name');
+  
+  updateRadioButtonPrice(priceId, elemName);
+  
+});
+
 
 // Live update of price boxes next to radio buttons
 function updateRadioButtonPrice(priceId, elemName) {

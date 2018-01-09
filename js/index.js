@@ -11,7 +11,6 @@ const prices = {
 
 var radioBtnLabels = document.getElementsByClassName("radio-btn-label");
 var checkboxLabels = document.getElementsByClassName("checkbox-btn-label");
-var checkboxInputs = document.querySelectorAll('[type="checkbox"]');
 
 // Add event listeners to all input parent labels
 function createListeners (inputArr) {

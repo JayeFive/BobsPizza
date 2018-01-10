@@ -47,6 +47,11 @@ function clearInvoice () {
   while (elements[0]) elements[0].parentNode.removeChild(elements[0]);
 }
 
+$('#orderReceipt').on('hidden.bs.modal', function () {
+  clearInvoice ();
+})
+
+
 // jQuery function to update radio prices
 $('label > input[type=radio]').on('change', function () {
   

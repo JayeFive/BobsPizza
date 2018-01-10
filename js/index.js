@@ -19,8 +19,16 @@ const optionStrings = {
 const toppingsMeat = ["Pepperoni", "Sausage", "Canadian Bacon", "Ground Beef", "Anchovy", "Chicken"];
 const toppingsVeggie = ["Tomatoes", "Onions", "Olives", "Green Peppers", "Mushrooms", "Spinach", "Pineapple"];
 
-updateTotalPrice();
+var totalPrice = 0;
+var numMeats = 0;
+var numVeggies = 0;
 
+
+
+
+
+/* Begin by totaling up the default values */
+updateTotalPrice();
 
 // Event handler for the refresh button in the navbar
 document.getElementById('refresh-button').addEventListener("click", resetForm, false);
@@ -30,9 +38,7 @@ function resetForm() {
 
 }
 
-
-
-
+// Clears the modal after closing it
 function clearInvoice () {
   var elements = document.getElementsByTagName("td");
   while (elements[0]) elements[0].parentNode.removeChild(elements[0]);
@@ -40,7 +46,6 @@ function clearInvoice () {
   elements = document.getElementsByTagName("tr");
   while (elements[0]) elements[0].parentNode.removeChild(elements[0]);
 }
-
 
 // jQuery function to update radio prices
 $('label > input[type=radio]').on('change', function () {
@@ -52,9 +57,6 @@ $('label > input[type=radio]').on('change', function () {
   updateTotalPrice();
   
 });
-
-
-
 
 // Live update of price boxes next to radio buttons
 function updateRadioButtonPrice(priceId, elemName) {
@@ -132,8 +134,6 @@ function getCheckedBoxes (inputName) {
   return numChecked;
 }
 
-var totalPrice = 0;
-
 // Function to update the totalPrice in navbar
 function updateTotalPrice () {
   
@@ -151,16 +151,8 @@ function updateTotalPrice () {
 
 
 
-
-
-
-
 /* These are the scripts for generating the receipt modal */
-var numMeats = 0;
-var numVeggies = 0;
-
-// This function runs the receipt modal
-// Needs desperately to be refactored
+// Generate the modal data
 function findTotalPrice () {
     
   var totalPrice = 0
@@ -218,7 +210,6 @@ function findTotalPrice () {
   generateOptionElem("", "");
   generateOptionElem("<strong>Total</strong>", "$" + totalPrice)
 }
-
 
 // Add line item to modal
 function generateOptionElem (option, price) {

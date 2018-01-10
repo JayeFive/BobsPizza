@@ -19,6 +19,8 @@ const optionStrings = {
 const toppingsMeat = ["Pepperoni", "Sausage", "Canadian Bacon", "Ground Beef", "Anchovy", "Chicken"];
 const toppingsVeggie = ["Tomatoes", "Onions", "Olives", "Green Peppers", "Mushrooms", "Spinach", "Pineapple"];
 
+updateTotalPrice();
+
 
 // Event handler for the refresh button in the navbar
 document.getElementById('refresh-button').addEventListener("click", resetForm, false);
@@ -27,6 +29,8 @@ document.getElementById('refresh-button').addEventListener("click", resetForm, f
 function resetForm() {
 
 }
+
+
 
 
 function clearInvoice () {
@@ -45,6 +49,7 @@ $('label > input[type=radio]').on('change', function () {
   elemName = $(this).attr('name');
   
   updateRadioButtonPrice(priceId, elemName);
+  updateTotalPrice();
   
 });
 
@@ -72,7 +77,9 @@ $('label > input[type=checkbox]').on('change', function () {
   elemName = $(this).attr('name');
   
   updateCheckedButtonPrice(priceId, elemName);
-  });
+  updateTotalPrice();
+  
+});
 
 
 // Live update of price boxes next to checkboxes
@@ -124,6 +131,22 @@ function getCheckedBoxes (inputName) {
   }
   return numChecked;
 }
+
+var totalPrice = 0;
+
+// Function to update the totalPrice in navbar
+function updateTotalPrice () {
+  
+  totalPrice = 0;
+  
+  $('.price-box').each(function () {
+	  totalPrice += Number(this.innerHTML)
+  });
+
+}
+
+
+
 
 
 

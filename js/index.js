@@ -143,6 +143,8 @@ function updateTotalPrice () {
 	  totalPrice += Number(this.innerHTML)
   });
 
+  $('#totalPrice').text(totalPrice.toFixed(2));
+
 }
 
 

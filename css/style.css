@@ -16,6 +16,10 @@ input {
         linear-gradient(90deg, rgb(90, 100, 90), rgb(220, 250, 220));
 }
 
+.header-title {
+    text-shadow: 2px 2px 3px green;
+}
+
 .selection {
     width: 12em !important;
 }

@@ -31,12 +31,12 @@ var numVeggies = 0;
 updateTotalPrice();
 
 
-// Manually set all radio buttons to their default value and clear all checkboxes and price boxes
+// Refresh button reloads the page
 $('#refresh-button').on('click', function () {
   location.reload();
 });
   
-
+  
 // Clears the modal after closing it
 function clearInvoice () {
   var elements = document.getElementsByTagName("td");
@@ -51,7 +51,6 @@ function clearInvoice () {
 $('#orderReceipt').on('hidden.bs.modal', function () {
   clearInvoice ();
 })
-
 
 // jQuery function to update radio prices
 $('label > input[type=radio]').on('change', function () {

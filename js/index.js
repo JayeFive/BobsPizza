@@ -30,13 +30,12 @@ var numVeggies = 0;
 /* Begin by totaling up the default values */
 updateTotalPrice();
 
-// Event handler for the refresh button in the navbar
-document.getElementById('refresh-button').addEventListener("click", resetForm, false);
 
 // Manually set all radio buttons to their default value and clear all checkboxes and price boxes
-function resetForm() {
-
-}
+$('#refresh-button').on('click', function () {
+  location.reload();
+});
+  
 
 // Clears the modal after closing it
 function clearInvoice () {
@@ -47,6 +46,8 @@ function clearInvoice () {
   while (elements[0]) elements[0].parentNode.removeChild(elements[0]);
 }
 
+
+// Clears the modal after user clicks off the modal
 $('#orderReceipt').on('hidden.bs.modal', function () {
   clearInvoice ();
 })
